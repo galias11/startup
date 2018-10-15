@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HTML-CSS-Basics Exercises</title>
+	<link rel="shortcut icon" href="img/example.ico">
+</head>
+<body>
+	<h1>Image</h1>
+	<br>
+	<figure>
+		<img src="img/alien.png" alt="Alien" width="320" height="325" role="img">
+	</figure>
+	<br>
+	<h1>Video</h1>
+	<br>
+	<video width="320" height="240" controls role="application">
+		<source src="media/video/DubInc-MyFreestyle.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video> 
+	<br>
+	<h1>Audio</h1>
+	<br>
+	<audio controls role="application">
+	  	<source src="media/audio/Alborosie.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<br><br>
+	<form id="sign-up" action="?" method="post">
+		<fieldset>
+			<legend>Sign up</legend>
+			<p>
+				<label>First Name: </label>
+				<input type="text" name="first-name" placeholder="e.g. Juan" required>
+			</p>
+			<br>
+			<p>
+				<label>Last Name: </label>
+				<input type="text" name="last-name" placeholder="e.g. Perez" required>
+			</p>
+			<br>
+			<p>
+				<label>Email: </label>
+				<input type="email" name="email" placeholder="e.g. myemail@gmail.com" required>
+			</p>
+			<br>
+			<p>
+				<label>Birthday: </label>
+				<input type="date" name="birthday" required>
+			</p>
+			<br>
+			<p>
+				<label>Choose your favourite sport:</label>
+				<select name="choose-sport" id="choose-sport" required>
+					<option value="">-- Open this list --</option>
+					<option value="Football">Football</option>
+					<option value="Tenis">Tenis</option>
+					<option value="Surf">Surf</option>
+				</select>
+			</p>
+			<br>
+			<p>
+				<label>Description about yourself:</label><br>
+				<textarea name="bio" id="bio" rows="5" cols="30" placeholder="My bio starts here..." required></textarea>
+			</p>
+		 	<br>
+		 	<p>
+		 		<button>Submit</button>
+		 		<button type="reset">Reset form</button>
+		 	</p>
+		</fieldset>
+	</form>
+</body>
+</html>

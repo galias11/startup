@@ -1,0 +1,144 @@
+/** GLOBAL **/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	width: 98%;
+}
+
+/** HELPER CLASSES**/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/** HEADER **/
+
+.introduction {
+	margin-bottom: 60px;
+}
+
+.site-title {
+	float: left;
+	font-weight: bold;
+	padding-left: 20px;
+	width: 30%;
+}
+
+.site-information {
+	float: right;
+	padding: 0 200px 0 20px;
+	width: 70%;
+}
+
+@media all and (max-width: 768px) {
+    .site-title {
+		float: none;
+	}
+
+    .site-information {
+        float: none;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.site-information p span {
+	font-weight: bold;
+}
+
+/** ALBUMS **/
+
+.albums-list li {
+	float: left;
+	padding: 10px;
+	width: 33.3%;
+}
+
+@media all and (max-width: 600px){
+	.albums-list li {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 1020px) and (min-width: 600px){
+	.albums-list li {
+        width: 50%;
+    }
+}
+
+.album {
+	position: relative;
+}
+
+.album img {
+	filter: gray;
+	-moz-filter: grayscale(1);
+	-ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.screen {
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	height: 30%;
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+	z-index: 1000;
+  	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.album a:hover .screen,
+.album a:hover img {
+	opacity: 1;
+	-moz-filter: grayscale(0);
+	-ms-filter: grayscale(0);
+	-webkit-filter: grayscale(0);
+}
+
+.title {
+	color: #fff;
+	font-size: 16px;
+  	font-weight: bold;
+  	margin-left: 10px;
+  	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.album img {
+	width: 100%;
+}
+
+

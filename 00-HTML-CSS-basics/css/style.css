@@ -1,0 +1,91 @@
+/** GLOBAL CLASSES **/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/** MAIN HEADER **/
+
+.header {
+	background-color: magenta;
+	color: #fff;
+	font-size: 46px;
+	padding: 20px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/** MAIN CONTENT**/
+
+.main-container {
+	margin-top: 20px;
+}
+
+.navigation {
+	background-color: blue;
+	float: left;
+	font-size: 12px;
+	margin: 0 1%;
+	padding: 0 10px 10px 10px;
+	width: 15%;
+}
+
+.navigation a {
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.content {
+	float: left;
+	font-size: 14px;
+	margin: 0 1%;
+	width: 60%;
+}
+
+.sidebar {
+	background-color: magenta;
+	float: left;
+	font-size: 10px;
+	margin: 0 1%;
+	padding: 0 10px;
+	width: 19%;
+}
+
+/** FOOTER **/
+
+.footer {
+	background-color: magenta;
+	bottom: 0;
+	color: #fff;
+	font-size: 10px;
+	margin-top:30px;
+	position: fixed;
+	width: 100%;
+}
+
+.footer .copyright {
+	padding: 20px 0;
+    text-align: center;
+}
+
+/** HELPER CLASSES**/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
