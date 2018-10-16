@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" > 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>sign-up</title>
+	</head>
+	<body>
+		
+		<section class="form"> 
+			<h2>SIGN UP</h2>
+			<form action="" method="GET">
+				
+				<label for="name">Nombre:</label>
+				<input type="text" name="fname" id="name" placeholder="Ingrese su nombre" required>
+				<br>
+				<label for="surname">Apellido:</label>
+				<input type="text" name="lname" id="surname" placeholder="Ingrese su apellido" required>
+				<br>
+				<label for="mail">Mail:</label>
+				<input type="email" name="email" id="mail" placeholder="ej: nombre@gmail.com" required>
+				<br>
+				<label for="bday">Fecha de nacimiento:</label>
+				<input type="date" name="bday" id="bday" min="2000-01-01" required>
+				<br>
+				<label for="sport">Deporte favorito:</label>
+				<select name="sport" id="sport" >
+					<option value="futbol">Futbol</option>
+					<option value="basquet">Basquet</option>	
+					<option value="golf">Golf</option>
+					<option value="natacion">Natacion</option>
+				</select>
+				<br>
+				<!--<label for="bio">Descripcion</label>
+				<input type="text" name="bio" id="bio" maxlength="200" placeholder="Ingrese una descripcion."> -->
+				<label for="bio">Descripcion</label>
+				<br>
+				<textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+				<br>
+				<button type="submit">Enviar</button>
+				<p>  </p>
+				<button type="reset">Reestablecer</button>
+			</form>
+		</section>
+	</body>
+</html>
+

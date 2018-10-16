@@ -1,0 +1,77 @@
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    background-color: rgb(222, 233, 173);
+}
+
+header, footer, aside , nav{ 
+  /*  background-image: url(../media/textura.jpg);
+    background-repeat: repeat-x;*/
+    background-color: rgb(132, 168, 75);
+}
+
+.header, .footer{
+    text-align: center;
+    background-color: magenta;
+}
+
+
+.header {
+    font-size: 30px;
+    width: 100%;
+    display: inline-block; /*si pongo solo block, el fondo solo ocupa el ancho de las letras*/
+}
+
+.footer{
+    font-size: 10px;
+    width: 100%;
+    display: inline-block;
+   
+} 
+.content {
+    
+    text-align: center;
+    font-size: 14px;
+    width: 50%;
+    margin-left: 25%;  /*como el nav tiene position: fixed ya no cuenta como bloque, por lo tanto tengo que calcular el margen desde el borde de la pantalla*/
+    margin-top: 2%;
+    border-color: rgb(224, 141, 141);
+    display: inline-block;
+    background-color: rgb(132, 168, 75);
+    
+}
+.navegation{ 
+    position: fixed;
+    font-size: 12px; 
+    float: left;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 20%;
+    display: inline-block;
+    background-color: blue;
+    
+} 
+.sidebar{
+    font-size: 10px;
+    float: right;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 20%;
+    display: inline-block;
+} 
+
+/*4)How could you add weight to the global font definition to win over the classes added by point 3?
+ con html * al ser mas especifico que el atributo class, tomaría los valores que estan debajo
+html *{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: 900; 
+}*/
+
+/*7)Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” 
+and you need to change the background to green without changing the inline style. How could you accomplish this?
+
+.oh-no-inline-styles {
+    background-color:green !important; 
+}
+*/

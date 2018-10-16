@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>multimedia</title>
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>LOS SIMPSONS</h1>
+		</header>
+		<section>
+			<div>
+				
+				<img src="media/simpsons.jpg" alt="imagen de Los Simpsons" title="Los Simpsons">
+				<img src="https://www.formulatv.com/images/series/posters/000/33/1_m3.jpg" alt="imagen de Los Simpsons" title="Los Simpsons">
+			</div>
+
+			<div>
+				<audio src="media/audioSimpsons.ogg" controls>
+					
+					Your browser does not support the <code>audio</code> element.  <!--if thr browser doesn't recognize the audio, with this line, it works-->
+				</audio>
+				<p>puede acceder a la transcripcion	del audio haciendo click <a href="trans.html">aqui</a></p> <!--I don´t prepare the translation-->
+			</div>
+			<div>
+				<!--<video src="media/videoSimpsons.mp4"  poster="multimedia/simpsons.jpg" controls>  it can be like this, but it's better if I do it as it is in the next line because if the browser doesn't support the video type(.ogg, .mp4) I can write different alternatives with <source> 	
+				-->
+				<video poster="media/simpsons.jpg" controls>
+					<source src="media/videoSimpsons.mp4" type= "video/mp4" >  
+					Your browser does not support the <code>video</code> element. <!--if i don't write this line, it doesn't works in mozilla-->
+				</video>
+			</div>
+		</section>
+		
+	</body>
+</html>
+
+
