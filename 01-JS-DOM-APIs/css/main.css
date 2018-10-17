@@ -1,0 +1,53 @@
+section {
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 96rem;
+  width: 90%;
+}
+
+.hidden {
+  display: none;
+}
+
+.one-third-column {
+  width: 33%;
+}
+
+.two-third-column {
+  width: 66%;
+}
+
+.sidebar {
+  float: right;
+  margin-top: 0.3%;
+}
+
+.content {
+  background-color: rgb(128,128,128);
+  background-color: rgba(128,128,128,0.8);
+  margin: 1%;
+  padding: 1% 0;
+}
+
+/* clearfix resets the flow of the document after grouping elements with float: defined inside of it */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
