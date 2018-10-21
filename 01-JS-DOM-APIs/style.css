@@ -1,0 +1,107 @@
+*{
+    margin: 0; padding: 0; text-align: center;
+}
+
+body{
+    background: url(../img/bilbao.jpg) no-repeat fixed center center;
+    background-size: cover;
+}
+
+.conteiner{
+    /*margin: auto; Nos permite centrar horizontalmente, nuestras img por defecto son inline-block, se cambia a block*/
+    position: relative;
+    margin: auto;
+    height: 250px;
+    width: 90%; 
+    margin-top: 30px;
+}
+
+.conteiner .sample{
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    flex-wrap: wrap;
+    border-radius: 50%;
+}
+
+.conteiner img{
+    float: right;
+}
+
+.sign_up{
+    font-size: 15px;
+    font-family: 'Signika', sans-serif;
+    max-width: 400px;
+    background-color: #EFEFEF;
+    opacity: 0.9;
+    height: auto;
+    margin: 5% auto;
+    padding-bottom: 1rem;
+}
+
+.option{
+    font-family: 'Crimson Text', serif;
+}
+
+.tittle{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-top: solid .4rem #f39b53;
+    margin-bottom: 1rem;
+}
+
+.tittle h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #00BFFF;
+}
+
+.reg{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;/**Cambiar el flujo por defecto **/
+    justify-content: center;
+}
+
+.button{
+    display: flex;
+    justify-content: space-around; /**para que los botones se separen**/
+    margin-top: 1rem;
+}
+
+.input, .submit, .reset{
+    background-color: #EFEFEF;
+    padding: 2rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid .2rem #C8C8C8;
+    transition: all .5s; 
+}
+
+.imput:focus{
+    border-bottom: solid #f39b53 .2rem;
+}
+
+.submit, .reset{
+    width: 40%;
+    border-bottom: none;
+    color: white;
+    font-weight: bold;
+    background-color: #00BFFF;
+    padding: 1rem !important;
+    border-radius: 50px;
+}
+
+.submit:hover{
+    background-color: #f39b53;
+}
+
+.reset:hover{
+    background-color: #f39b53;
+}
+footer{
+    margin-top: 1000px;
+    bottom: 0;
+    text-align: center;
+}

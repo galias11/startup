@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>La vida es un viaje</title>  
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+</head>
+<body>
+    <div class="sign_up">
+        <div class="tittle">
+            <h2>Application form</h2>
+        </div>
+        <form action="" class="reg">
+            <input type="text" class="input" placeholder="&#128100; First Name" required autofocus>
+            <input type="text" class="input" placeholder="&#128100; Last Name" required autofocus>
+            <input type="email" class="input" placeholder="&#9993; E-mail" required>
+            <input type="date" class="input" placeholder="&#127874; Birthday">
+            <br>
+            <p>
+                Civil status: <br>
+                <div class="option">
+                    <input type="radio" name="status" id="single"><label for="single">Single</label><br>
+                    <input type="radio" name="status" id="married" onclick="show2();"><label for="married">Married</label><br>
+                </div>
+                <div id="hidden" style="display:none;">
+                    <input type="text" class="input" placeholder="&#128100; First Name" required autofocus>
+                    <input type="text" class="input" placeholder="&#128100; Last Name" required autofocus>
+                    <input type="number" class="input" placeholder="Age" min="0" required autofocus>
+                </div>
+            </p>
+            <div class="button">
+                <input type="submit" class="submit" value="REGISTER">
+                <input type="reset" class="reset" value="CLEAN">
+            </div>
+        </form>
+    </div>
+    <footer>
+    </footer>   
+    <script src="script/scripts.js"></script> 
+</body>
+</html>
