@@ -1,20 +1,24 @@
-/*var section = document.createElement("section");
-section.style.display = "none";
+var section = document.createElement("section");
 section.innerHTML = "Hello World";
-document.getElementById("hidden").appendChild("section");
-*/
-document.getElementById("hidden").style.display = "none";
+document.getElementById("hidden").appendChild(section);
 
-function show(){
-    var type = document.getElementsByName("status");
-    if(type[1].checked){
-        document.getElementById("hidden").style.display = "block";
-    }
+
+function hide(){
+    section.style.display = "none";
 }
 
-function show2(){
+/*
+function hide(){
+    document.getElementById("hidden").style.display = 'none';
+}
+*/
+
+function show(){
+    var val = document.getElementById("deploy");
     if(document.getElementById("married").checked){
-        var val = document.getElementById("hidden");
         val.style.display = "block";
+    }
+    else{
+        val.style.display = "none";
     }
 }

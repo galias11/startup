@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>La vida es un viaje</title>  
+    <title>Application form</title>  
     <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
 </head>
-<body>
-    <div class="sign_up">
+<body onload="hide()";>
+    <section id="hidden">
+        
+    </section>
+    <section class="sign_up">
         <div class="tittle">
             <h2>Application form</h2>
         </div>
@@ -23,10 +26,10 @@
             <p>
                 Civil status: <br>
                 <div class="option">
-                    <input type="radio" name="status" id="single"><label for="single">Single</label><br>
-                    <input type="radio" name="status" id="married" onclick="show2();"><label for="married">Married</label><br>
+                    <input type="radio" name="status" id="single" onclick="show();"><label for="single">Single</label><br>
+                    <input type="radio" name="status" id="married" onclick="show();"><label for="married">Married</label><br>
                 </div>
-                <div id="hidden" style="display:none;">
+                <div id="deploy" style="display:none;">
                     <input type="text" class="input" placeholder="&#128100; First Name" required autofocus>
                     <input type="text" class="input" placeholder="&#128100; Last Name" required autofocus>
                     <input type="number" class="input" placeholder="Age" min="0" required autofocus>
@@ -37,7 +40,7 @@
                 <input type="reset" class="reset" value="CLEAN">
             </div>
         </form>
-    </div>
+    </section>
     <footer>
     </footer>   
     <script src="script/scripts.js"></script> 

@@ -1,10 +1,14 @@
 *{
-    margin: 0; padding: 0; text-align: center;
+    margin: 0; padding: 0;
 }
 
 body{
-    background: url(../img/bilbao.jpg) no-repeat fixed center center;
+    background: url(../../img/pic2.jpg) no-repeat fixed center center;
     background-size: cover;
+}
+
+section{
+    text-align: center;
 }
 
 .conteiner{
@@ -104,4 +108,9 @@ footer{
     margin-top: 1000px;
     bottom: 0;
     text-align: center;
+}
+
+#hidden{
+    font-size: 30px;
+    font-weight: bold;
 }
