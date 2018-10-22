@@ -3,7 +3,7 @@
 }
 
 body{
-    background: url(../../img/pic2.jpg) no-repeat fixed center center;
+    background: url(../../../img/pic2.jpg) no-repeat fixed center center;
     background-size: cover;
 }
 
@@ -113,4 +113,14 @@ footer{
 #hidden{
     font-size: 30px;
     font-weight: bold;
+}
+
+.alert{
+    padding: 15px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 50px;
 }

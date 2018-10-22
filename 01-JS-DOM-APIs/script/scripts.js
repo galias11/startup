@@ -22,3 +22,7 @@ function show(){
         val.style.display = "none";
     }
 }
+
+function createAlert(){
+    alert("What's up?");
+}
