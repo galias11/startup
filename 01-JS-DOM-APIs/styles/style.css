@@ -128,3 +128,7 @@ footer{
     margin-top: 2rem;
     font-style: italic;
 }
+
+.list-search{
+    float: right;
+}

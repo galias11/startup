@@ -66,3 +66,23 @@ function makeAjaxCall(url, methodType){ //Reusable function to perform AJX calls
     });
     return promiseObj;
 }
+
+
+//Data fetching with parameters
+function search(value = 'JavaScript') {
+    document.getElementById("repositoriesList").innerHTML = "";
+    var config = {};
+    config.method = 'GET';
+    config.url = 'https://api.github.com/search/repositories?q=' + value;
+
+    AJAXCall(config).then(response => {
+        let result = JSON.parse(response);
+        let content = '';
+        console.log(result);
+        result.items.forEach(element => {
+        content += '<li>' + element['name'] + '</li>'
+    });
+    document.getElementById("repositoriesList").innerHTML = content;
+    })
+    .catch(error => console.log(error))
+}
