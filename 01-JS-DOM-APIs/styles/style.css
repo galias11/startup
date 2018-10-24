@@ -115,12 +115,16 @@ footer{
     font-weight: bold;
 }
 
-.alert{
+.joke{
     padding: 15px;
-    margin-left: 1rem;
     margin-top: 2rem;
     font-weight: bold;
     color: #ffffff;
     background-color: #1883ba;
     border-radius: 50px;
+}
+
+#makeJoke{
+    margin-top: 2rem;
+    font-style: italic;
 }
