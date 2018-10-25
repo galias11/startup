@@ -80,7 +80,7 @@ function handleSearch(data) {
     var list = document.getElementById("repositoriesList");
     for(let repositorie of data.items){
         let repositorieName = document.createElement('li');
-        repositorieName.innerHTML = repo.full_name;
+        repositorieName.innerHTML = repositorie.full_name;
         list.appendChild(repositorieName);
     }
 }
