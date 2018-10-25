@@ -84,3 +84,21 @@ function handleSearch(data) {
         list.appendChild(repositorieName);
     }
 }
+
+function generateTable(matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]) {
+    let matri = document.getElementById('matrix');
+    let table = document.createElement('table');  
+    let tbody = document.createElement('tbody');
+    for(let i=0; i<3; i++) {
+        let tr = document.createElement('tr'); //row
+        for (let j=0; j<3; j++) {
+            let td = document.createElement('td');//column    
+            let node = document.createTextNode(matrix[i][j]);
+            td.appendChild(node);
+            tr.appendChild(td); //Appending childs from inside out
+        }
+        tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    matri.appendChild(table);
+}

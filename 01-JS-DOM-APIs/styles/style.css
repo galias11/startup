@@ -132,3 +132,10 @@ footer{
 .list-search{
     float: right;
 }
+
+.generateTable{
+    margin-top: 4rem;
+    padding: 10px;
+    font-weight: bold;
+    
+}
