@@ -1,10 +1,13 @@
 //https://netbasal.com/javascript-the-magic-behind-event-emitter-cce3abcbcef9
+import {eventEmitter} from './eventEmitter.js';
+import {social} from './social.js';
 
-class Movie extends eventEmitter{
-    constructor(name, year, duration){
-        this.name = name;
+export default class Movie extends eventEmitter{
+    constructor(tittle, year, duration){
+        this.tittle = tittle;
         this.year = year;
         this.duration = duration;
+        Object.assign(Movie.prototype, social);
     }
 
     play(){
