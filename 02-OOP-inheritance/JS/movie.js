@@ -18,6 +18,16 @@ class Movie extends eventEmitter{
     resume(){
         this.emit('resume');
     }
+
+    addCast(cast){
+        if(!this.cast)
+            this.cast = [];
+
+        if(Array.isArray(cast)) //actor array case
+            this.cast = this.cast.concat(cast);
+        else
+            this.cast.push(cast);
+    }
 }
 
 
