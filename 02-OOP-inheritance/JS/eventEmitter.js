@@ -1,19 +1,22 @@
 class EventEmmitter{
     constructor(){
-        this.events = {};
+        this.events = {}; //empty object.
     }
 
     on(eventName, callback){
-        this.events[eventName] = this.events[eventName] || []
+        if(!this.events[eventName]){
+            this.events[eventName] = [];
+        }
+
         this.events[eventName].push(callback);
     }
 
     emit(eventName){
-        let event = this.event[eventName];
+        const event = this.event[eventName];
 
         if(event){
-            event.forEach(function(func){
-                func(eventName);
+            event.forEach(callback => {
+                callback.call(this);
             });
         }
     }
