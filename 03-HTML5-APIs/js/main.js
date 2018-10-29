@@ -39,6 +39,7 @@ function clearBoth(){
     var reques = info.clear();
     
 }
+//-----------------------------------------------------------------------------------------------
 function dropOver(event){
     event.stopPropagation();
     event.preventDefault();
@@ -75,7 +76,26 @@ function dropOverText(event){
     }    
 }
 
-
 var dropzone = document.getElementById("textarea");
 dropzone.addEventListener('dragover',dropOver,false);
 dropzone.addEventListener('drop',dropOverText,false);
+//-------------------------------------------------------------------------------------
+function webSocketTesting(messsage){
+
+    var webSock = new WebSocket('ws://echo.websocket.org');
+
+    webSock.onopen = ev =>{
+        console.log('Conection Done');
+        webSock.send(messsage);
+    }
+    webSock.onclose = ev =>{
+        console.log('Conection Close');
+    }
+    webSock.onmessage = ev =>{
+        console.log('Receiving response');
+        document.getElementById("socketOutPut").innerHTML = 'Response ' + ev.data;
+    }
+    webSock.onerror = ev =>{
+        console.log('Error');
+    }
+}
