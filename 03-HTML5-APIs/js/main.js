@@ -39,3 +39,43 @@ function clearBoth(){
     var reques = info.clear();
     
 }
+function dropOver(event){
+    event.stopPropagation();
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+
+}
+function dropOverText(event){
+    event.stopPropagation();
+    event.preventDefault();
+  
+    if (event.dataTransfer.items.length > 1) {
+      console.log('Cant read more than one file');
+    }
+    else { 
+      if (event.dataTransfer.items[0].kind === 'file') { //Check if dropped items are files
+        var txt = event.dataTransfer.items[0].getAsFile();
+    
+        var reader = new FileReader();
+  
+        reader.readAsText(txt);
+  
+        reader.onload = ev => {
+          data = reader.result;
+        }
+      
+        reader.onloadend = ev => {
+          event.target.innerHTML = data;
+        }
+      
+        reader.onerror = ev => {
+          console.log('Error at reading file');
+        }      
+      }
+    }    
+}
+
+
+var dropzone = document.getElementById("textarea");
+dropzone.addEventListener('dragover',dropOver,false);
+dropzone.addEventListener('drop',dropOverText,false);
