@@ -1,4 +1,4 @@
-class Movie{
+class Movie extends eventEmitter{
     constructor(name, year, duration){
         this.name = name;
         this.year = year;
@@ -6,15 +6,15 @@ class Movie{
     }
 
     play(){
-        
+        this.emit('play');
     }
 
     pause(){
-        
+        this.emit('pause');
     }
 
     resume(){
-        
+        this.emit('resume');
     }
 }
 
