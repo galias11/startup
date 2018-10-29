@@ -1,0 +1,74 @@
+
+html{
+    background-color: bisque;
+}
+#hidden{
+    opacity: 0;
+}
+
+#hidden.loaded{
+    opacity: 1;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+}
+footer{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    bottom: 0%;
+}
+
+
+section#joke.error{
+    background-color: red;
+}
+
+section#joke{
+    background-color: bisque;
+    margin-top:5%;
+}
+
+section.wrapper {
+    margin-top: 2%;
+    float: left;
+    width:100%;
+}
+section.row{
+    display: flex;
+}
+.wrapper section.column-two-third{
+    margin-top: 5%;
+    top: 0%;
+    width: 66%;
+    text-align: center;   
+}
+.wrapper aside.column-one-third{
+    margin-top: 5%;
+    width: 33%; 
+    text-align: left;   
+}
+
+.button{
+    padding: 1%;
+    margin-top: 5%;
+    
+}
+
+section#table{
+    position: relative;
+    margin-left: 45%;
+    
+}
+
+table{
+    border: 1px solid black;
+}
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
