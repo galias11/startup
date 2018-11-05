@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MovieForm from './MovieForm';
+import MovieList from './MovieList.js';
 
 class MovieContainer extends Component{
     constructor(props){
@@ -18,13 +19,15 @@ class MovieContainer extends Component{
     render() {
         return (
          <div>
-           <section className="Content">
-             <header>
-               <h2>Add your favourite movies</h2>
-             </header>
+            <section className="Content">
+              <header>
+                <h2>Add your favourite movies</h2>
+              </header>
             <MovieForm movie={null} action={this.addMovie}/>
            </section>
-        
+            <section>
+              <MovieList movies={this.state.movies}/>
+            </section>
          </div>
         );
       }
