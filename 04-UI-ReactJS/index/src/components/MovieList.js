@@ -7,8 +7,13 @@ class MovieList extends Component{
     this.handleEditing = this.handleEditing.bind(this);
   }
   handleEditing = (e) =>{
-    const moviesArray = this.props.movies.slice();
-    moviesArray.forEach(element => {
+    let list = this.props.movies.filter(film => {
+      if(film.name !== e.name){
+        return film;
+      }
+    });
+    this.props.action(list);
+    list.forEach(element => {
       if(element.name === e.name){
         element.year = e.year;
         element.description = e.description;
@@ -22,7 +27,7 @@ class MovieList extends Component{
         element.year = e.year;
       }
     });
-    this.props.action(moviesArray);
+    this.props.action(list);
   }
   render(){
     const movies = this.props.movies.map((m, i) =>
@@ -30,7 +35,7 @@ class MovieList extends Component{
       <td>{m.name}</td>
       <td>{m.year}</td>
       <td>{m.description}</td>
-      <td><MovieForm movie={m} action={this.handleEditing}/></td>
+      <td><MovieForm movie={m} action={this.handleEditing} /></td>
       </tr>);
       return(
           <React.Fragment>

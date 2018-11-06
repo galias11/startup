@@ -11,7 +11,6 @@ class MovieForm extends Component{
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        
     }
     handleInputChange = (e) =>{
         const target = e.target;
@@ -21,7 +20,7 @@ class MovieForm extends Component{
             [name]: value
         });
     };
-
+   
 
     handleSubmit = (e) =>{
         e.preventDefault();
@@ -39,37 +38,39 @@ class MovieForm extends Component{
             }
         }
     };
+    
     render(){
         return(
+            <div>
             <form onSubmit={this.handleSubmit}>
-       <label>
-         Name:
-         <input
-          name="movieName"
-          value={this.state.movieName}
-          type="text"
-          onChange={this.handleInputChange}/>
-       </label>
-       <label>
-         Year:
-         <input
-          name="movieYear"
-          value={this.state.movieYear}
-          type="date"
-          onChange={this.handleInputChange}/>
-       </label>
-       <label>
-         Description:
-         <input
-          name="movieDescription"
-          value={this.state.movieDescription}
-          type="text"
-          onChange={this.handleInputChange}/>
-       </label>
-       
-       <input type="submit" name={this.props.action} value="Submit"/>
-     
-     </form>
+                <label>
+                    Name:
+                    <input
+                    name="movieName"
+                    value={this.state.movieName}
+                    type="text"
+                    onChange={this.handleInputChange}/>
+                </label>
+                <label>
+                    Year:
+                    <input
+                    name="movieYear"
+                    value={this.state.movieYear}
+                    type="date"
+                    onChange={this.handleInputChange}/>
+                </label>
+                <label>
+                    Description:
+                    <input
+                    name="movieDescription"
+                    value={this.state.movieDescription}
+                    type="text"
+                    onChange={this.handleInputChange}/>
+                </label> 
+                <input type="submit" name={this.props.action} value="Submit"/>
+            </form>
+            <button onClick={this.handleSubmit}>Delete</button>
+            </div>
         );
     }
 }

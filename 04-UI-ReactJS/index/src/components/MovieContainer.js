@@ -18,10 +18,9 @@ class MovieContainer extends Component{
         });
     }
     editMovie(moviesArray){
-      
-    this.setState({
-      movies: moviesArray
-    });
+        this.setState({
+            movies: moviesArray
+        });
     }
 
     render() {
@@ -34,7 +33,7 @@ class MovieContainer extends Component{
             <MovieForm movie={this.state.movies} action={this.addMovie}/>
            </section>
             <section>
-              <MovieList movies={this.state.movies} action={this.editMovie}/>
+              <MovieList movies={this.state.movies} action={this.editMovie} onClick={this.editMovie}/>
             </section>
          </div>
         );
