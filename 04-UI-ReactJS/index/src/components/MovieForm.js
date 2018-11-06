@@ -5,12 +5,13 @@ class MovieForm extends Component{
     constructor(props){
         super(props);
         this.state = {
-            movieName: '',
-            movieYear: '',
-            movieDescription: '',
+            movieName: this.props.movie.name,
+            movieYear: this.props.movie.year,
+            movieDescription: this.props.movie.description,
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
     handleInputChange = (e) =>{
         const target = e.target;
@@ -20,18 +21,22 @@ class MovieForm extends Component{
             [name]: value
         });
     };
+
+
     handleSubmit = (e) =>{
         e.preventDefault();
-        const key = this.props.k;
         const movie = new Movie(this.state.movieName,this.state.movieYear,this.state.movieDescription);
-        if(movie.name !== ''){
-            if(key >= 0){
-                this.props.action(key,movie);
-            }else{
-                this.props.action(movie);
-            }
+        if(this.state.movieName !== movie.name || this.state.movieYear !== movie.year || this.state.movieDescription !== movie.description){
+            movie.name = this.state.movieName;
+            movie.year = this.state.movieYear;
+            movie.description = this.state.movieDescription;
+            return movie;
         }else{
-            alert('Movie title not completed');
+            if(movie.name !== ''){
+                this.props.action(movie);
+            }else{
+                alert('Movie title not completed');
+            }
         }
     };
     render(){
@@ -45,7 +50,6 @@ class MovieForm extends Component{
           type="text"
           onChange={this.handleInputChange}/>
        </label>
-       <br />
        <label>
          Year:
          <input
@@ -54,7 +58,6 @@ class MovieForm extends Component{
           type="date"
           onChange={this.handleInputChange}/>
        </label>
-       <br />
        <label>
          Description:
          <input
@@ -63,8 +66,9 @@ class MovieForm extends Component{
           type="text"
           onChange={this.handleInputChange}/>
        </label>
-       <br />
-       <input type="submit" value="Submit"/>
+       
+       <input type="submit" name={this.props.action} value="Submit"/>
+     
      </form>
         );
     }

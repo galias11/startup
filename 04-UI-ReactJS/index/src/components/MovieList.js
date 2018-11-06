@@ -1,13 +1,36 @@
 import React, {Component} from 'react';
-
+import MovieForm from './MovieForm'
 class MovieList extends Component{
+  constructor(props){
+    super(props);
 
+    this.handleEditing = this.handleEditing.bind(this);
+  }
+  handleEditing = (e) =>{
+    const moviesArray = this.props.movies.slice();
+    moviesArray.forEach(element => {
+      if(element.name === e.name){
+        element.year = e.year;
+        element.description = e.description;
+      }
+      if(element.year ===e.year){
+        element.name = e.name;
+        element.description = e.description;
+      }
+      if(element.description === e.description){
+        element.name = e.name;
+        element.year = e.year;
+      }
+    });
+    this.props.action(moviesArray);
+  }
   render(){
     const movies = this.props.movies.map((m, i) =>
       <tr key={i}>
       <td>{m.name}</td>
       <td>{m.year}</td>
       <td>{m.description}</td>
+      <td><MovieForm movie={m} action={this.handleEditing}/></td>
       </tr>);
       return(
           <React.Fragment>

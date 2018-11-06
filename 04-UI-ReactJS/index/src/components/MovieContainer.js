@@ -9,6 +9,7 @@ class MovieContainer extends Component{
             movies: [],
         }
         this.addMovie = this.addMovie.bind(this);
+        this.editMovie = this.editMovie.bind(this);
     }
     addMovie(movie){
         const movies = this.state.movies;
@@ -16,6 +17,13 @@ class MovieContainer extends Component{
             movies: [...movies,movie]
         });
     }
+    editMovie(moviesArray){
+      
+    this.setState({
+      movies: moviesArray
+    });
+    }
+
     render() {
         return (
          <div>
@@ -23,10 +31,10 @@ class MovieContainer extends Component{
               <header>
                 <h2>Add your favourite movies</h2>
               </header>
-            <MovieForm movie={null} action={this.addMovie}/>
+            <MovieForm movie={this.state.movies} action={this.addMovie}/>
            </section>
             <section>
-              <MovieList movies={this.state.movies}/>
+              <MovieList movies={this.state.movies} action={this.editMovie}/>
             </section>
          </div>
         );
